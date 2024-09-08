@@ -6,7 +6,7 @@ services:
       CF_API_KEY: ${CF_API_KEY}
       CF_PAGE_URL: ${CF_PAGE_URL}
       CF_FORCE_SYNCHRONIZE: "true"
-      CF_EXCLUDE_MODS: "5562753"
+      CF_EXCLUDE_MODS: "yungs-menu-tweaks,xaeroplus"
       EULA: "true"
     ports:
       - "25565:25565"
