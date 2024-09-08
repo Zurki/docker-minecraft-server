@@ -6,7 +6,7 @@ services:
       CF_API_KEY: ${CF_API_KEY}
       CF_PAGE_URL: ${CF_PAGE_URL}
       CF_EXCLUDE_MODS: |
-        yungsmenutweaks
+        yungs-menu-tweaks
         xaeroplus
       EULA: "true"
     ports:
