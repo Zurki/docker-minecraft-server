@@ -2,6 +2,9 @@ services:
   mc:
     image: itzg/minecraft-server
     environment:
+      TYPE: ${MC_TYPE} 
+      CF_API_KEY: ${CF_API_KEY}
+      CF_PAGE_URL: ${CF_PAGE_URL}
       EULA: "true"
     ports:
       - "25565:25565"
