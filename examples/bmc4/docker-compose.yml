@@ -4,9 +4,9 @@ services:
     environment:
       EULA: true
       TYPE: MODRINTH
-      MEMORY: 4G
+      MEMORY: 6G
       MODRINTH_MODPACK: better-mc-forge-bmc4
-      MODRINTH_VERSION: v28
+      MODRINTH_VERSION: v35
       MODRINTH_OVERRIDES_EXCLUSIONS: |
         mods/NekosEnchantedBooks-*.jar
         mods/citresewn-*.jar
