@@ -5,6 +5,8 @@ services:
       TYPE: ${MC_TYPE} 
       CF_API_KEY: ${CF_API_KEY}
       CF_PAGE_URL: ${CF_PAGE_URL}
+      CF_OVERRIDES_EXCLUSIONS: |
+        mods/YungsMenuTweaks-*.jar
       EULA: "true"
     ports:
       - "25565:25565"
