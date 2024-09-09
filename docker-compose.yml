@@ -2,14 +2,16 @@ services:
   mc:
     image: itzg/minecraft-server:java17
     environment:
-      MEMORY: 7G
-      MAX_MEMORY: 7G
-      TYPE: ${MC_TYPE} 
-      CF_API_KEY: ${CF_API_KEY}
-      CF_SLUG: ${CF_SLUG}
-      CF_FILE_ID: ${CF_FILE_ID}
-      CF_EXCLUDE_MODS: "yungs-menu-tweaks,xaeroplus"
-      CF_FORCE_REINSTALL_MODLOADER: "true"
+      MEMORY: 5G
+      MAX_MEMORY: 5G
+      TYPE: CURSEFORGEE
+      CF_SERVER_MOD: ${CF_SERVER_MOD}
+      #TYPE: ${MC_TYPE} 
+      #CF_API_KEY: ${CF_API_KEY}
+      #CF_SLUG: ${CF_SLUG}
+      #CF_FILE_ID: ${CF_FILE_ID}
+      #CF_EXCLUDE_MODS: "yungs-menu-tweaks,xaeroplus"
+      #CF_FORCE_REINSTALL_MODLOADER: "true"
       EULA: "true"
     ports:
       - "25565:25565"
