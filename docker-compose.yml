@@ -4,7 +4,7 @@ services:
     environment:
       MEMORY: 5G
       MAX_MEMORY: 5G
-      TYPE: CURSEFORGEE
+      TYPE: CURSEFORGE
       CF_SERVER_MOD: ${CF_SERVER_MOD}
       #TYPE: ${MC_TYPE} 
       #CF_API_KEY: ${CF_API_KEY}
