@@ -2,7 +2,8 @@ services:
   mc:
     image: itzg/minecraft-server
     environment:
-      MEMORY: 5G
+      MEMORY: 7G
+      MAX_MEMORY: 7G
       TYPE: ${MC_TYPE} 
       CF_API_KEY: ${CF_API_KEY}
       CF_PAGE_URL: ${CF_PAGE_URL}
