@@ -6,7 +6,8 @@ services:
       MAX_MEMORY: 7G
       TYPE: ${MC_TYPE} 
       CF_API_KEY: ${CF_API_KEY}
-      CF_PAGE_URL: ${CF_PAGE_URL}
+      CF_SLUG: ${CF_SLUG}
+      CF_MODPACK_ZIP: ${CF_MODPACK_ZIP}
       CF_EXCLUDE_MODS: "yungs-menu-tweaks,xaeroplus"
       CF_FORCE_REINSTALL_MODLOADER: "true"
       EULA: "true"
