@@ -1,6 +1,6 @@
 services:
   mc:
-    image: itzg/minecraft-server
+    image: itzg/minecraft-server:java17
     environment:
       MEMORY: 7G
       MAX_MEMORY: 7G
