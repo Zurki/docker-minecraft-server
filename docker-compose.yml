@@ -7,7 +7,7 @@ services:
       TYPE: ${MC_TYPE} 
       CF_API_KEY: ${CF_API_KEY}
       CF_SLUG: ${CF_SLUG}
-      CF_MODPACK_ZIP: ${CF_MODPACK_ZIP}
+      CF_FILE_ID: ${CF_FILE_ID}
       CF_EXCLUDE_MODS: "yungs-menu-tweaks,xaeroplus"
       CF_FORCE_REINSTALL_MODLOADER: "true"
       EULA: "true"
