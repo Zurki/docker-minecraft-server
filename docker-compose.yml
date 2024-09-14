@@ -3,15 +3,9 @@ services:
     image: itzg/minecraft-server:java17
     environment:
       MEMORY: 5G
-      MAX_MEMORY: 5G
+      JVM_OPTS: "-Xmx5G -Xms5G"  # Set both min and max memory
       TYPE: CURSEFORGE
       CF_SERVER_MOD: ${CF_SERVER_MOD}
-      #TYPE: ${MC_TYPE} 
-      #CF_API_KEY: ${CF_API_KEY}
-      #CF_SLUG: ${CF_SLUG}
-      #CF_FILE_ID: ${CF_FILE_ID}
-      #CF_EXCLUDE_MODS: "yungs-menu-tweaks,xaeroplus"
-      #CF_FORCE_REINSTALL_MODLOADER: "true"
       EULA: "true"
     ports:
       - "25565:25565"
