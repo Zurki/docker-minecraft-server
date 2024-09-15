@@ -7,8 +7,8 @@ services:
       JVM_OPTS: "-Xmx6G -Xms4G"  # Setze JVM Speicherzuweisungen
       CF_SERVER_MOD: ${CF_SERVER_MOD}
       MOTD: |-
-        §1§l$nFurz24.de
-        §7powered by §6hhrn.de
+        §1§lFurz24.de
+        §7powered by §6henk.pm
       OPS: |
         Zurki
       VERSION: 1.20.1
