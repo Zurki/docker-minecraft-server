@@ -3,8 +3,8 @@ services:
     image: itzg/minecraft-server:java17
     environment:
       TYPE: CURSEFORGE
-      MEMORY: 6G
-      JVM_OPTS: "-Xmx6G -Xms4G"  # Setze JVM Speicherzuweisungen
+      MEMORY: 10G
+      JVM_OPTS: "-Xmx10G -Xms4G"  # Setze JVM Speicherzuweisungen
       CF_SERVER_MOD: ${CF_SERVER_MOD}
       MOTD: |-
         §1§lFurz24.de
@@ -23,7 +23,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 7g  # Container Speicherlimit
-          cpus: "2"   # CPU Limit
+          memory: 12g  # Container Speicherlimit
+          cpus: "8"   # CPU Limit
 volumes:
   data: {}
