@@ -2,17 +2,17 @@ services:
   mc:
     image: itzg/minecraft-server:java8-openj9
     environment:
-      TYPE: CURSEFORGE
+      TYPE: AUTO_CURSEFORGE
       MEMORY: 10G
       JVM_OPTS: "-Xmx10G -Xms4G"  # Setze JVM Speicherzuweisungen
-      CF_SLUG: "create-above-and-beyond"
-      CF_SLUG_VERSION: "1.3"
+      CF_PAGE_URL: ${CF_PAGE_URL}
       CF_API_KEY: ${CF_API_KEY}
       MOTD: |-
         §1§lFurz24.de
         §7powered by §6henk.pm
       OPS: |
         Zurki
+      VERSION: 1.16.5
       EULA: "true"
     ports:
       - "25565:25565"
