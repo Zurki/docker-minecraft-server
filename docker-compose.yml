@@ -1,6 +1,6 @@
 services:
   mc:
-    image: itzg/minecraft-server:java8-openj9
+    image: itzg/minecraft-server:java17
     environment:
       TYPE: AUTO_CURSEFORGE
       MEMORY: 10G
