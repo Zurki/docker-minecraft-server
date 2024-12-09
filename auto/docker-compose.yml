@@ -5,7 +5,7 @@ services:
       TYPE: AUTO_CURSEFORGE
       MEMORY: 10G
       JVM_OPTS: "-Xmx10G -Xms4G"  # Setze JVM Speicherzuweisungen
-      CF_SLUG: ${CF_SERVER_MOD}
+      CF_PAGE_URL: ${CF_SERVER_MOD}
       CF_API_KEY: ${CF_API_KEY}
       MOTD: |-
         §1§lFurz24.de
