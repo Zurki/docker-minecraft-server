@@ -12,7 +12,7 @@ services:
         §7powered by §6henk.pm
       OPS: |
         Zurki
-      VERSION: 1.18.2
+      VERSION: 1.20.1
       EULA: "true"
     ports:
       - "25565:25565"
