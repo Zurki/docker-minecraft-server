@@ -6,7 +6,7 @@ services:
       MEMORY: 10G
       JVM_OPTS: "-Xmx10G -Xms4G"  # Setze JVM Speicherzuweisungen
       CF_SLUG: ${CF_SERVER_MOD}
-      CF_API_KEY: ${CF_API_KEY
+      CF_API_KEY: ${CF_API_KEY}
       MOTD: |-
         §1§lFurz24.de
         §7powered by §6henk.pm
