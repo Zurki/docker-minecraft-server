@@ -15,6 +15,7 @@ services:
         Zurki
       VERSION: 1.20.1
       EULA: "true"
+      REMOVE_MODS: "forgeskyboxes*.jar"
     ports:
       - "25575:25575"
       - "25565:25565"
