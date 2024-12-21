@@ -15,7 +15,8 @@ services:
         Zurki
       VERSION: 1.20.1
       EULA: "true"
-      REMOVE_MODS: "forgeskyboxes*.jar"
+      CF_EXCLUDE_MODS: "forgeskyboxes"
+      CF_FORCE_SYNCHRONIZE: "true"
     ports:
       - "25575:25575"
       - "25565:25565"
