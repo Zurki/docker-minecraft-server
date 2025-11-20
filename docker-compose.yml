@@ -4,7 +4,6 @@ services:
     environment:
       SEED: "-123456793079414942"
       TYPE: AUTO_CURSEFORGE
-      # MEMORY: 10G entfernt, da JVM_OPTS gesetzt ist
       JVM_OPTS: "-Xmx10G -Xms4G"
       CF_PAGE_URL: ${CF_PAGE_URL}
       CF_API_KEY: ${CF_API_KEY}
@@ -16,7 +15,11 @@ services:
         Zurki
       VERSION: 1.21.1
       EULA: "true"
-      CF_EXCLUDE_MODS: "forgeskyboxes,colorwheel,iris,oculus,rubidium,magnesium"
+      # KORREKTUR: "iris" entfernt. Nur colorwheel und forgeskyboxes bleiben.
+      CF_EXCLUDE_MODS: "forgeskyboxes,colorwheel"
+      # Wir lassen Synchronize auf false, um Boot-Loops zu vermeiden,
+      # falls wir gleich manuell löschen müssen.
+      CF_FORCE_SYNCHRONIZE: "false"
     ports:
       - "25575:25575"
       - "25565:25565"
