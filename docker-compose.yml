@@ -2,6 +2,7 @@ services:
   mc:
     image: itzg/minecraft-server:java21
     environment:
+      SEED: "-123456793079414942"
       TYPE: AUTO_CURSEFORGE
       MEMORY: 10G
       JVM_OPTS: "-Xmx10G -Xms4G"  # Setze JVM Speicherzuweisungen
