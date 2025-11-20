@@ -16,7 +16,7 @@ services:
         Zurki
       VERSION: 1.21.1
       EULA: "true"
-      CF_EXCLUDE_MODS: "forgeskyboxes"
+      CF_EXCLUDE_MODS: "forgeskyboxes,colorwheel,iris"
       CF_FORCE_SYNCHRONIZE: "true"
     ports:
       - "25575:25575"
