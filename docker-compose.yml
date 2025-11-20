@@ -4,8 +4,8 @@ services:
     environment:
       SEED: "-123456793079414942"
       TYPE: AUTO_CURSEFORGE
-      MEMORY: 10G
-      JVM_OPTS: "-Xmx10G -Xms4G"  # Setze JVM Speicherzuweisungen
+      # MEMORY: 10G entfernt, da JVM_OPTS gesetzt ist
+      JVM_OPTS: "-Xmx10G -Xms4G"
       CF_PAGE_URL: ${CF_PAGE_URL}
       CF_API_KEY: ${CF_API_KEY}
       MOTD: |-
@@ -16,7 +16,7 @@ services:
         Zurki
       VERSION: 1.21.1
       EULA: "true"
-      CF_EXCLUDE_MODS: "forgeskyboxes,colorwheel,iris"
+      CF_EXCLUDE_MODS: "forgeskyboxes,colorwheel,iris,oculus,rubidium,magnesium"
       CF_FORCE_SYNCHRONIZE: "true"
     ports:
       - "25575:25575"
@@ -29,7 +29,8 @@ services:
     deploy:
       resources:
         limits:
-          memory: 12g  # Container Speicherlimit
-          cpus: "8"   # CPU Limit
+          memory: 12g
+          cpus: "8"
+
 volumes:
   data: {}
