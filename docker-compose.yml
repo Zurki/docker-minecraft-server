@@ -17,7 +17,6 @@ services:
       VERSION: 1.21.1
       EULA: "true"
       CF_EXCLUDE_MODS: "forgeskyboxes,colorwheel,iris,oculus,rubidium,magnesium"
-      CF_FORCE_SYNCHRONIZE: "true"
     ports:
       - "25575:25575"
       - "25565:25565"
