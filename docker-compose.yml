@@ -16,7 +16,6 @@ services:
       VERSION: 1.21.1
       EULA: "true"
       # KORREKTUR: "iris" entfernt. Nur colorwheel und forgeskyboxes bleiben.
-      MODS: "chunky,spark,simple-backups,luckperms"
       CF_EXCLUDE_MODS: "forgeskyboxes,colorwheel"
       # Wir lassen Synchronize auf false, um Boot-Loops zu vermeiden,
       # falls wir gleich manuell löschen müssen.
