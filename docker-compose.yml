@@ -1,10 +1,27 @@
 services:
   mc:
     image: itzg/minecraft-server:java21
+    entrypoint:
+      - "/bin/bash"
+      - "-c"
+      - |
+        echo "--- [Coolify] Erstelle Auto-Install Script für Chunky & Spark ---"
+        mkdir -p /scripts
+        
+        # Wir schreiben den Inhalt des Skripts direkt in eine Datei im Container
+        echo '#!/bin/bash' > /scripts/99-install-extras.sh
+        echo 'echo "--- [Extra-Mods] Lade Chunky und Spark herunter... ---"' >> /scripts/99-install-extras.sh
+        echo '/usr/bin/mc-image-helper curseforge install --api-key $CF_API_KEY --minecraft-version 1.21.1 --mod-loader neoforge --output-directory /data/mods chunky spark' >> /scripts/99-install-extras.sh
+        
+        chmod +x /scripts/99-install-extras.sh
+        
+        # Übergebe die Kontrolle an den normalen Server-Start
+        exec /start
     environment:
       SEED: "-123456793079414942"
       TYPE: AUTO_CURSEFORGE
-      JVM_OPTS: "-Xmx10G -Xms4G"
+      environment:
+      JVM_OPTS: "-Xmx10G -Xms10G -XX:+UseZGC -XX:+ZGenerational -XX:+AlwaysPreTouch"
       CF_PAGE_URL: ${CF_PAGE_URL}
       CF_API_KEY: ${CF_API_KEY}
       MOTD: |-
@@ -15,10 +32,7 @@ services:
         Zurki
       VERSION: 1.21.1
       EULA: "true"
-      # KORREKTUR: "iris" entfernt. Nur colorwheel und forgeskyboxes bleiben.
       CF_EXCLUDE_MODS: "forgeskyboxes,colorwheel"
-      # Wir lassen Synchronize auf false, um Boot-Loops zu vermeiden,
-      # falls wir gleich manuell löschen müssen.
       CF_FORCE_SYNCHRONIZE: "false"
     ports:
       - "25575:25575"
@@ -32,7 +46,7 @@ services:
       resources:
         limits:
           memory: 12g
-          cpus: "8"
+          cpus: "10"
 
 volumes:
   data: {}
