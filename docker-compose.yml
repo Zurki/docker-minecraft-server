@@ -2,27 +2,28 @@ services:
   mc:
     image: itzg/minecraft-server:java21
     environment:
-      SEED: "-123456793079414942"
       TYPE: AUTO_CURSEFORGE
       MEMORY: "10G"
       JVM_OPTS: "-XX:+UseZGC -XX:+ZGenerational -XX:+AlwaysPreTouch"
       CF_PAGE_URL: ${CF_PAGE_URL}
       CF_API_KEY: ${CF_API_KEY}
-      MOTD: |-
-        §1§lFurz24.de
-        §7powered by §6henk.pm
       OPS: |
         Zurki
       VERSION: 1.21.1
       EULA: "true"
       CF_EXCLUDE_MODS: "forgeskyboxes,colorwheel"
-      CURSEFORGE_FILES: "chunky-pregenerator-forge,spark,ai-improvements"
+      CURSEFORGE_FILES: "chunky-pregenerator-forge,spark,ai-improvements,styled-chat"
       CF_FORCE_SYNCHRONIZE: "false"
 
       #MC Settings
-      SP_SIMULATION_DISTANCE: "5"
-      SP_MAX_TICK_TIME: "60000"
-      SP_ALLOW_FLIGHT: "TRUE" # Besser in Anführungszeichen
+      SIMULATION_DISTANCE: "5"
+      MAX_TICK_TIME: "60000"
+      ALLOW_FLIGHT: "TRUE" # Besser in Anführungszeichen
+      MAX_PLAYERS: 99999
+      SEED: "-123456793079414942"
+      MOTD: |-
+        §3§l§k|||§r§5Hallo Nina, Mori, Svenni, Hagen, Paul§3§l§k|||§r
+        §7powered by 🐹§6Hamsterrädern§r🐹
     ports:
       - "25575:25575"
       - "25565:25565"
