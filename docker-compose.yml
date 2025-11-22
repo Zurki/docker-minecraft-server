@@ -20,6 +20,7 @@ services:
       MAX_TICK_TIME: "60000"
       ALLOW_FLIGHT: "TRUE" # Besser in Anführungszeichen
       MAX_PLAYERS: 99999
+      SEED: "118823198"
       MOTD: |-
         §3§l§k|||§r§5Hallo Nina, Mori, Svenni, Hagen, Paul§3§l§k|||§r
         §7powered by 🐹§6Hamsterrädern§r🐹
