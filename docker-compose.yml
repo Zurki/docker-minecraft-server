@@ -3,8 +3,7 @@ services:
     image: itzg/minecraft-server:java21
     environment:
       TYPE: AUTO_CURSEFORGE
-      MEMORY: "10G"
-      JVM_OPTS: "-XX:+UseZGC -XX:+ZGenerational -XX:+AlwaysPreTouch"
+      JVM_OPTS: "-Xms10g -Xmx10g -XX:+UseZGC -XX:+ZGenerational -XX:+AlwaysPreTouch"
       CF_PAGE_URL: ${CF_PAGE_URL}
       CF_API_KEY: ${CF_API_KEY}
       OPS: |
