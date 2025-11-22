@@ -1,22 +1,6 @@
 services:
   mc:
     image: itzg/minecraft-server:java21
-    entrypoint:
-      - "/bin/bash"
-      - "-c"
-      - |
-        echo "--- [Coolify] Erstelle Auto-Install Script für Chunky & Spark ---"
-        mkdir -p /scripts
-        
-        # Wir schreiben den Inhalt des Skripts direkt in eine Datei im Container
-        echo '#!/bin/bash' > /scripts/99-install-extras.sh
-        echo 'echo "--- [Extra-Mods] Lade Chunky und Spark herunter... ---"' >> /scripts/99-install-extras.sh
-        echo '/usr/bin/mc-image-helper curseforge install --api-key $CF_API_KEY --minecraft-version 1.21.1 --mod-loader neoforge --output-directory /data/mods chunky spark' >> /scripts/99-install-extras.sh
-        
-        chmod +x /scripts/99-install-extras.sh
-        
-        # Übergebe die Kontrolle an den normalen Server-Start
-        exec /start
     environment:
       SEED: "-123456793079414942"
       TYPE: AUTO_CURSEFORGE
@@ -33,6 +17,7 @@ services:
       VERSION: 1.21.1
       EULA: "true"
       CF_EXCLUDE_MODS: "forgeskyboxes,colorwheel"
+      CF_ADD_MODS: "chunky-pregenerator"
       CF_FORCE_SYNCHRONIZE: "false"
     ports:
       - "25575:25575"
