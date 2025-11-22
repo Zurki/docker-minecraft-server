@@ -11,14 +11,18 @@ services:
       MOTD: |-
         §1§lFurz24.de
         §7powered by §6henk.pm
-      ALLOW_FLIGHT: "TRUE" # Besser in Anführungszeichen
       OPS: |
         Zurki
       VERSION: 1.21.1
       EULA: "true"
       CF_EXCLUDE_MODS: "forgeskyboxes,colorwheel"
-      CURSEFORGE_FILES: "chunky-pregenerator-forge"
+      CURSEFORGE_FILES: "chunky-pregenerator-forge,spark,ai-improvements"
       CF_FORCE_SYNCHRONIZE: "false"
+
+      #MC Settings
+      SP_SIMULATION_DISTANCE: "5"
+      SP_MAX_TICK_TIME: "60000"
+      SP_ALLOW_FLIGHT: "TRUE" # Besser in Anführungszeichen
     ports:
       - "25575:25575"
       - "25565:25565"
