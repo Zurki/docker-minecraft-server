@@ -4,7 +4,8 @@ services:
     environment:
       SEED: "-123456793079414942"
       TYPE: AUTO_CURSEFORGE
-      JVM_OPTS: "-Xmx10G -Xms10G -XX:+UseZGC -XX:+ZGenerational -XX:+AlwaysPreTouch"
+      MEMORY: "10G"
+      JVM_OPTS: "-XX:+UseZGC -XX:+ZGenerational -XX:+AlwaysPreTouch"
       CF_PAGE_URL: ${CF_PAGE_URL}
       CF_API_KEY: ${CF_API_KEY}
       MOTD: |-
