@@ -17,7 +17,7 @@ services:
       VERSION: 1.21.1
       EULA: "true"
       CF_EXCLUDE_MODS: "forgeskyboxes,colorwheel"
-      CURSEFORGE_FILES: "chunky"
+      CURSEFORGE_FILES: "chunky-pregenerator-forge"
       CF_FORCE_SYNCHRONIZE: "false"
     ports:
       - "25575:25575"
