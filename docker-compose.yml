@@ -3,7 +3,7 @@ services:
     image: itzg/minecraft-server:java21
     environment:
       TYPE: AUTO_CURSEFORGE
-      MEMORY: "10G"
+      MEMORY: "13G"
       JVM_OPTS: "-XX:+UseZGC -XX:+ZGenerational -XX:+AlwaysPreTouch"
       CF_PAGE_URL: ${CF_PAGE_URL}
       CF_API_KEY: ${CF_API_KEY}
@@ -35,7 +35,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 12g
+          memory: 13g
           cpus: "10"
 
 volumes:
